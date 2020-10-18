@@ -1,6 +1,6 @@
 package com.cherry.algorithm.tree;
 
-import utils.TreeNode;
+import com.cherry.algorithm.utils.TreeNode;
 
 /**
  * @author: xiangshaopeng

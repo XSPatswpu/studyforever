@@ -1,6 +1,6 @@
 package com.cherry.algorithm.sreachback;
 
-import utils.TreeNode;
+import com.cherry.algorithm.utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

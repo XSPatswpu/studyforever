@@ -1,6 +1,6 @@
 package com.cherry.algorithm.tree;
 
-import utils.TreeNode;
+import com.cherry.algorithm.utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
