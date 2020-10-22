@@ -7,6 +7,11 @@ import com.cherry.algorithm.utils.ListNode;
  * @date: 2020/10/22 16:21
  */
 public class Leetcode_206 {
+    /**
+     * pre cur 双指针
+     * @param head
+     * @return
+     */
     public ListNode reverseList(ListNode head) {
         ListNode pre = null;
         ListNode cur = head;
