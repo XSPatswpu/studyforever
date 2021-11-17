@@ -42,9 +42,9 @@ public class Leetcode_198 {
         if (nums.length == 1) {
             return nums[0];
         }
-        int current = 0, pre, pre2;
+        int current, pre, pre2;
         pre2 = nums[0];
-        pre = Math.max(nums[0], nums[1]);
+        current = pre = Math.max(nums[0], nums[1]);
         for (int i = 2; i < nums.length; i++) {
             current = Math.max(pre, pre2 + nums[i]);
             pre2 = pre;
