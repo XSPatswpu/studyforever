@@ -1,20 +1,18 @@
-<a href="url">1. 两数之和</a>
+## 数组
 
-<a href="url">24. 两两交换链表中的节点</a>
+## 链表
 
-<a href="url">69. x 的平方根</a>
+Leetcode_160 相交链表
 
-<a href="url">75. 颜色分类</a>
+## 栈
 
-<a href="url">142. 环形链表 II</a>
+## 队列
 
-<a href="url">146. LRU缓存机制</a>
+## 二叉树
 
-<a href="url">206. 反转链表</a>
+## 动态规划
 
-<a href="url">415. 字符串相加</a>
-
-<a href="url">771. 宝石与石头</a>
+## 贪心算法
 
 
 
