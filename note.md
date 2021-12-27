@@ -35,7 +35,7 @@
 | :----: | :----: | :----: |
 | [102](https://leetcode-cn.com/problems/binary-tree-level-order-traversal/) | 二叉树的层序遍历 | 一般 |
 | [103](https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/) | 二叉树的锯齿形层序遍历 | 一般 |
-| [203](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) | 二叉树的最近公共祖先 | 一般 |
+| [236](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) | 二叉树的最近公共祖先 | 一般 |
 
 ## 动态规划
 
