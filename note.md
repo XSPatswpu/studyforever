@@ -58,6 +58,7 @@
 | :----: | :----: | :----: |
 | [53](https://leetcode-cn.com/problems/maximum-subarray/) | 最大子数组和 | 一般 |
 | [121](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/) | 买卖股票的最佳时机 | 一般 |
+| [5](https://leetcode-cn.com/problems/longest-palindromic-substring/) | 最长回文子串 | 一般 |
 
 ## 贪心算法
 
