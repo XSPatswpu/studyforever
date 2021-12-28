@@ -1,36 +1,31 @@
 package com.cherry.algorithm.string;
 
-public class Leetcode_415 {
+class Solution {
     public String addStrings(String num1, String num2) {
-        int high = 0;
-        int len1 = num1.length();
-        int len2 = num2.length();
-        StringBuilder result = new StringBuilder();
-        for (int i = len1 - 1, j = len2 - 1; i > -1 || j > -1; i--,j--) {
-            int value1 = 0;
-            int value2 = 0;
-            if (i > -1) {
-                value1 = getInt(num1.charAt(i));
-            }
-            if (j > -1) {
-                value2 = getInt(num2.charAt(j));
-            }
-            int currentValue = value1 + value2 + high;
-            if (currentValue > 9) {
-                high = 1;
-                currentValue = currentValue - 10;
-            } else {
-                high = 0;
-            }
-            result.append(currentValue);
+
+        int n1 = num1.length() - 1;
+        int n2 = num2.length() - 1;
+
+        int temp = 0;
+        StringBuilder number = new StringBuilder();
+        while (n1 >= 0 || n2 >= 0) {
+            int value1 = n1 < 0 ? 0 : getNum(num1.charAt(n1));
+            int value2 = n2 < 0 ? 0 : getNum(num2.charAt(n2));
+            int sum = value1 + value2 + temp;
+            temp = sum / 10;
+            number.append(sum % 10);
+            n1--;
+            n2--;
         }
-        if (high == 1) {
-            result.append(1);
+
+        if (temp > 0) {
+            number.append(1);
         }
-        return result.reverse().toString();
+
+        return number.reverse().toString();
     }
 
-    public int getInt(char c) {
-        return c - '0';
+    public int getNum(char ch) {
+        return ch - '0';
     }
 }

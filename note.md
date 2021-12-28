@@ -1,3 +1,4 @@
+# 数据结构
 ## 数组
 
 | Leetcode题号 | 题目 | 掌握程度 |
@@ -21,6 +22,12 @@
 | :----: | :----: | :----: |
 | [20](https://leetcode-cn.com/problems/valid-parentheses/) | 有效的括号 | 一般 |
 
+## 单调栈
+
+| Leetcode题号 | 题目 | 掌握程度 |
+| :----: | :----: | :----: |
+| [402](https://leetcode-cn.com/problems/remove-k-digits/) | 移掉 K 位数字 | 差 |
+
 ## 队列
 
 ## 堆
@@ -37,6 +44,14 @@
 | [103](https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal/) | 二叉树的锯齿形层序遍历 | 一般 |
 | [236](https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/) | 二叉树的最近公共祖先 | 一般 |
 
+## hash 表
+
+| Leetcode题号 | 题目 | 掌握程度 |
+| :----: | :----: | :----: |
+| [1](https://leetcode-cn.com/problems/two-sum/) | 两数之和 | 一般 |
+
+# 算法
+
 ## 动态规划
 
 | Leetcode题号 | 题目 | 掌握程度 |
@@ -49,6 +64,7 @@
 | Leetcode题号 | 题目 | 掌握程度 |
 | :----: | :----: | :----: |
 | [53](https://leetcode-cn.com/problems/maximum-subarray/) | 最大子数组和 | 一般 |
+| [402](https://leetcode-cn.com/problems/remove-k-digits/) | 移掉 K 位数字 | 差 |
 
 ## 滑动窗口
 
@@ -66,18 +82,15 @@
 
 ## 排序
 
-## hash 表
-
-| Leetcode题号 | 题目 | 掌握程度 |
-| :----: | :----: | :----: |
-| [1](https://leetcode-cn.com/problems/two-sum/) | 两数之和 | 一般 |
+## 递归
 
 ## 其他
 
 | Leetcode题号 | 题目 | 掌握程度 |
 | :----: | :----: | :----: |
 | [146](https://leetcode-cn.com/problems/lru-cache/) | LRU 缓存 | 一般 |
-| [15](https://leetcode-cn.com/problems/3sum/) | 三数之和 | 一般 ｜
+| [15](https://leetcode-cn.com/problems/3sum/) | 三数之和 | 一般 |
+| [415](https://leetcode-cn.com/problems/add-strings/) | 字符串相加 | 较好 |
 
 
 
