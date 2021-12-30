@@ -11,7 +11,7 @@
 | :----: | :----: | :----: |
 | [21](https://leetcode-cn.com/problems/merge-two-sorted-lists/) | 合并两个有序链表 | 一般 |
 | [160](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) | 相交链表 | 一般 |
-| [25](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/) | K 个一组翻转链表 | 一般 |
+| [25](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/) | K 个一组翻转链表 | <font color=red>差</font> |
 | [141](https://leetcode-cn.com/problems/linked-list-cycle/) | 环形链表 | 一般 |
 | [142](https://leetcode-cn.com/problems/linked-list-cycle-ii/) | 环形链表 II | 一般 |
 | [206](https://leetcode-cn.com/problems/reverse-linked-list/) | 反转链表 | 一般 |
@@ -26,7 +26,7 @@
 
 | Leetcode题号 | 题目 | 掌握程度 |
 | :----: | :----: | :----: |
-| [402](https://leetcode-cn.com/problems/remove-k-digits/) | 移掉 K 位数字 | 差 |
+| [402](https://leetcode-cn.com/problems/remove-k-digits/) | 移掉 K 位数字 | <font color=red>差</font> |
 
 ## 队列
 
@@ -34,7 +34,7 @@
 
 | Leetcode题号 | 题目 | 掌握程度 |
 | :----: | :----: | :----: |
-| [215](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/) | 数组中的第K个最大元素 | 一般 |
+| [215](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/) | 数组中的第K个最大元素 | <font color=red>差</font> |
 
 ## 二叉树
 
@@ -65,7 +65,7 @@
 | Leetcode题号 | 题目 | 掌握程度 |
 | :----: | :----: | :----: |
 | [53](https://leetcode-cn.com/problems/maximum-subarray/) | 最大子数组和 | 一般 |
-| [402](https://leetcode-cn.com/problems/remove-k-digits/) | 移掉 K 位数字 | 差 |
+| [402](https://leetcode-cn.com/problems/remove-k-digits/) | 移掉 K 位数字 | <font color=red>差</font> |
 
 ## 滑动窗口
 
@@ -74,6 +74,10 @@
 | [3](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | 无重复字符的最长子串 | 一般 |
 
 ## 二分查找
+
+| Leetcode题号 | 题目 | 掌握程度 |
+| :----: | :----: | :----: |
+| [4](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/) | 寻找两个正序数组的中位数 | <font color=red>差</font> |
 
 ## 分治算法
 
@@ -89,8 +93,8 @@
 
 | Leetcode题号 | 题目 | 掌握程度 |
 | :----: | :----: | :----: |
-| [146](https://leetcode-cn.com/problems/lru-cache/) | LRU 缓存 | 一般 |
-| [15](https://leetcode-cn.com/problems/3sum/) | 三数之和 | 一般 |
+| [146](https://leetcode-cn.com/problems/lru-cache/) | LRU 缓存 | <font color=red>差</font> |
+| [15](https://leetcode-cn.com/problems/3sum/) | 三数之和 | <font color=red>差</font> |
 | [415](https://leetcode-cn.com/problems/add-strings/) | 字符串相加 | 较好 |
 
 
