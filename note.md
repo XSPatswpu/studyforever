@@ -78,6 +78,7 @@
 | Leetcode题号 | 题目 | 掌握程度 |
 | :----: | :----: | :----: |
 | [4](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/) | 寻找两个正序数组的中位数 | <font color=red>差</font> |
+| [33](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) | 搜索旋转排序数组 | <font color=red>差</font> |
 
 ## 分治算法
 
