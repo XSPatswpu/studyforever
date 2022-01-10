@@ -13,6 +13,7 @@ public class Leetcode_33 {
 
         public int searchK(int[] nums, int left, int right) {
             while (left < right) {
+                // 靠右选择中间元素
                 int mid = (left + right + 1) / 2;
                 if (nums[mid] < nums[left]) {
                     right = mid - 1;

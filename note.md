@@ -75,10 +75,13 @@
 
 ## 二分查找
 
+二分查找的基本写法有两种写法：第一种查找区间为[a, b]；第二种查找区间为[a, b + 1)
+
 | Leetcode题号 | 题目 | 掌握程度 |
 | :----: | :----: | :----: |
 | [4](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/) | 寻找两个正序数组的中位数 | <font color=red>差</font> |
 | [33](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) | 搜索旋转排序数组 | <font color=red>差</font> |
+| [35](https://leetcode-cn.com/problems/search-insert-position/) | 搜索插入位置 | <font color=red>较好</font> |
 
 ## 分治算法
 
