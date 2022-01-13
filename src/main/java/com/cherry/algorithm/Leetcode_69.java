@@ -36,4 +36,26 @@ public class Leetcode_69 {
         }
         return mid;
     }
+
+    public int mySqrt1(int x) {
+        long left = 0;
+        long right = x;
+        while (left <= right) {
+            long mid = left + (right - left) / 2;
+            if (mid * mid < x) {
+                left = mid + 1;
+            } else if (mid * mid > x) {
+                right = mid - 1;
+            } else {
+                return (int) mid;
+            }
+        }
+        return (int) right;
+    }
+
+    public static void main(String[] args) {
+        Leetcode_69 leetcode_69 = new Leetcode_69();
+        int i = leetcode_69.mySqrt1(2147395599);
+        System.out.println(i);
+    }
 }

@@ -83,6 +83,8 @@
 | [33](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/) | 搜索旋转排序数组 | <font color=red>差</font> |
 | [35](https://leetcode-cn.com/problems/search-insert-position/) | 搜索插入位置 | 较好 |
 | [34](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | 在排序数组中查找元素的第一个和最后一个位置 | 较好 |
+| [69](https://leetcode-cn.com/problems/sqrtx/) | Sqrt(x) | 一般 |
+| [367](https://leetcode-cn.com/problems/valid-perfect-square/) | 有效的完全平方数 | 较好 |
 
 ## 分治算法
 
