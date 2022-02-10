@@ -4,6 +4,7 @@
 | Leetcode题号 | 题目 | 掌握程度 |
 | :----: | :----: | :----: |
 | [88](https://leetcode-cn.com/problems/merge-sorted-array/) | 合并两个有序数组 | 一般 |
+| [27](https://leetcode-cn.com/problems/remove-element/) | 移除元素 | 一般 |
 
 ## 链表
 
