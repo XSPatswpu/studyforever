@@ -6,6 +6,8 @@
 | [88](https://leetcode-cn.com/problems/merge-sorted-array/) | 合并两个有序数组 | 一般 |
 | [26](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/) | 删除有序数组中的重复项 | 一般 |
 | [27](https://leetcode-cn.com/problems/remove-element/) | 移除元素 | 一般 |
+| [283](https://leetcode-cn.com/problems/move-zeroes/) | 移动零 | 一般 |
+| [844](https://leetcode-cn.com/problems/backspace-string-compare/) | 比较含退格的字符串 | 一般 |
 
 ## 链表
 
