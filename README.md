@@ -8,6 +8,8 @@
 | [27](https://leetcode-cn.com/problems/remove-element/) | 移除元素 | 一般 |
 | [283](https://leetcode-cn.com/problems/move-zeroes/) | 移动零 | 一般 |
 | [844](https://leetcode-cn.com/problems/backspace-string-compare/) | 比较含退格的字符串 | 一般 |
+| [977](https://leetcode-cn.com/problems/squares-of-a-sorted-array/) | 有序数组的平方 | 一般 |
+| [209](https://leetcode-cn.com/problems/minimum-size-subarray-sum/) | 长度最小的子数组 | 一般 |
 
 ## 链表
 
@@ -76,6 +78,7 @@
 | Leetcode题号 | 题目 | 掌握程度 |
 | :----: | :----: | :----: |
 | [3](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | 无重复字符的最长子串 | 一般 |
+| [209](https://leetcode-cn.com/problems/minimum-size-subarray-sum/) | 长度最小的子数组 | 一般 |
 
 ## 二分查找
 
