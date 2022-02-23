@@ -1,6 +1,6 @@
 package com.cherry.leetcode.structure.heap;
 
-import com.cherry.leetcode.utils.ArrayUtil;
+import com.cherry.leetcode.utils.PrintUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ public class Leetcode_347 {
         int[] arr = {1, 2};
         int k = 2;
         Leetcode_347 s = new Leetcode_347();
-        ArrayUtil.print(s.topKFrequent(arr, k));
+        PrintUtil.print(s.topKFrequent(arr, k));
 
     }
 

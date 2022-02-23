@@ -1,6 +1,6 @@
 package com.cherry.leetcode.algorithm;
 
-import com.cherry.leetcode.utils.ArrayUtil;
+import com.cherry.leetcode.utils.PrintUtil;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +14,7 @@ public class Leetcode_75 {
         int[] arr = {1,2,0};
         Leetcode_75 leet = new Leetcode_75();
         leet.sortColors(arr);
-        ArrayUtil.print(arr);
+        PrintUtil.print(arr);
     }
     public void sortColors(int[] nums) {
         int front = 0;

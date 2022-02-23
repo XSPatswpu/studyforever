@@ -4,7 +4,7 @@ package com.cherry.leetcode.utils;
  * @author: xiangshaopeng
  * @date: 2020/5/21 21:27
  */
-public class ArrayUtil {
+public class PrintUtil {
     public static void print(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i]);
@@ -40,6 +40,20 @@ public class ArrayUtil {
                 }
             }
             System.out.println();
+        }
+    }
+
+    public static void printList(ListNode node) {
+        if (node == null) {
+            return;
+        }
+        ListNode cur = node;
+        while (cur != null) {
+            System.out.print(cur.val);
+            if (cur.next != null) {
+                System.out.print(" -> ");
+            }
+            cur = cur.next;
         }
     }
 }

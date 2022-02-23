@@ -1,6 +1,6 @@
 package com.cherry.leetcode.algorithm.sort;
 
-import com.cherry.leetcode.utils.ArrayUtil;
+import com.cherry.leetcode.utils.PrintUtil;
 
 /**
  * @author: xiangshaopeng
@@ -11,7 +11,7 @@ public class BubbleSort {
     public static void main(String[] args) {
         int[] array = {2,18,6,1,33,23};
         BubbleSort bs = new BubbleSort();
-        ArrayUtil.print(bs.bubbleSort(array));
+        PrintUtil.print(bs.bubbleSort(array));
     }
 
     public int[] bubbleSort(int[] arr) {

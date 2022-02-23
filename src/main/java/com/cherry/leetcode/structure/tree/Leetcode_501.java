@@ -1,7 +1,7 @@
 package com.cherry.leetcode.structure.tree;
 
 
-import com.cherry.leetcode.utils.ArrayUtil;
+import com.cherry.leetcode.utils.PrintUtil;
 import com.cherry.leetcode.utils.TreeNode;
 
 import java.util.ArrayList;
@@ -45,7 +45,7 @@ public class Leetcode_501 {
 
         Leetcode_501 leetcode_501 = new Leetcode_501();
         int[] mode = leetcode_501.findMode(node0);
-        ArrayUtil.print(mode);
+        PrintUtil.print(mode);
 
 
     }

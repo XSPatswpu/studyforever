@@ -1,6 +1,6 @@
 package com.cherry.leetcode.structure.array;
 
-import com.cherry.leetcode.utils.ArrayUtil;
+import com.cherry.leetcode.utils.PrintUtil;
 
 public class Leetcode_283 {
 
@@ -10,7 +10,7 @@ public class Leetcode_283 {
 //        int[] array = {0, 1, 0, 3, 12};
         int[] array = {0 , 0};
         lc.moveZeroes(array);
-        ArrayUtil.print(array);
+        PrintUtil.print(array);
 
     }
 

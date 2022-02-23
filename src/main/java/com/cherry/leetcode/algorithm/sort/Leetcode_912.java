@@ -1,6 +1,6 @@
 package com.cherry.leetcode.algorithm.sort;
 
-import com.cherry.leetcode.utils.ArrayUtil;
+import com.cherry.leetcode.utils.PrintUtil;
 
 import java.util.Random;
 
@@ -13,7 +13,7 @@ public class Leetcode_912 {
 
 
         leetcode_912.sortArray(nums);
-        ArrayUtil.print(nums);
+        PrintUtil.print(nums);
     }
 
     public Random random = new Random();

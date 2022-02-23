@@ -1,6 +1,6 @@
 package com.cherry.leetcode.algorithm.sort;
 
-import com.cherry.leetcode.utils.ArrayUtil;
+import com.cherry.leetcode.utils.PrintUtil;
 
 /**
  * @author: xiangshaopeng
@@ -13,7 +13,7 @@ public class QuickSort {
         QuickSort qs = new QuickSort();
         qs.quickSort2(array, 0, array.length - 1);
 
-        ArrayUtil.print(array);
+        PrintUtil.print(array);
 
     }
 

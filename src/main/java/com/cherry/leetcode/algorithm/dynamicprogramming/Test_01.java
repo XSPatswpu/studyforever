@@ -1,6 +1,6 @@
 package com.cherry.leetcode.algorithm.dynamicprogramming;
 
-import com.cherry.leetcode.utils.ArrayUtil;
+import com.cherry.leetcode.utils.PrintUtil;
 
 /**
  * @author: xiangshaopeng
@@ -121,7 +121,7 @@ public class Test_01 {
 //            }
 //        }
 
-        ArrayUtil.print(status);
+        PrintUtil.print(status);
 
     }
 
@@ -169,7 +169,7 @@ public class Test_01 {
 
         }
 
-        ArrayUtil.print(status);
+        PrintUtil.print(status);
 
 
     }
@@ -200,7 +200,7 @@ public class Test_01 {
             }
         }
         // 找出最大值
-        ArrayUtil.print(states);
+        PrintUtil.print(states);
     }
 
     /**

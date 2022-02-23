@@ -1,6 +1,6 @@
 package com.cherry.leetcode.structure.array;
 
-import com.cherry.leetcode.utils.ArrayUtil;
+import com.cherry.leetcode.utils.PrintUtil;
 
 public class Leetcode_977 {
 
@@ -10,7 +10,7 @@ public class Leetcode_977 {
         Leetcode_977 lc977 = new Leetcode_977();
         int[] ints = lc977.sortedSquares1(array);
 
-        ArrayUtil.print(ints);
+        PrintUtil.print(ints);
 
 
     }
