@@ -13,21 +13,24 @@ public class Leetcode_24 {
      * @return
      */
     public ListNode swapPairs(ListNode head) {
-        ListNode preHead = new ListNode(-1);
-        preHead.next = head;
-        ListNode cur = preHead;
-        while (cur.next != null && cur.next.next != null) {
-            reverse(cur, cur.next, cur.next.next);
-            cur = cur.next.next;
-        }
-        return preHead.next;
+        ListNode hair = new ListNode(-1);
+        hair.next = head;
+        return doSwapPairs(hair, head);
     }
 
-    public void reverse(ListNode cur, ListNode left, ListNode right) {
-        ListNode temp = right.next;
-        right.next = left;
-        left.next = temp;
-        cur.next = right;
+    public ListNode doSwapPairs(ListNode prev, ListNode cur) {
+        if (cur == null || cur.next == null) {
+            return cur;
+        }
+
+        // 处理前两个结点
+        ListNode temp = cur.next.next;
+        cur.next.next = cur;
+        prev.next = cur.next;
+
+        // 处理后面结点
+        cur.next = doSwapPairs(cur, temp);
+        return prev.next;
     }
 
     /**
