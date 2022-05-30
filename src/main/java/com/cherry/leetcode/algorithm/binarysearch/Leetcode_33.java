@@ -2,7 +2,61 @@ package com.cherry.leetcode.algorithm.binarysearch;
 
 public class Leetcode_33 {
     class Solution {
+
+
         public int search(int[] nums, int target) {
+            int left = 0;
+            int right = nums.length - 1;
+
+            while (left <= right) {
+                int mid = left + (right - left) / 2;
+
+                if (nums[mid] == target) {
+                    return mid;
+                }
+
+                if (nums[left] == target) {
+                    return left;
+                }
+
+                if (nums[right] == target) {
+                    return right;
+                }
+
+                // left
+                if (nums[left] < nums[mid]) {
+                    // target
+                    if (target > nums[left] && target < nums[mid]) {
+                        right = mid - 1;
+                    } else {
+                        left = mid + 1;
+                    }
+                } else {
+                    // target
+                    if (target > nums[mid] && target < nums[right]) {
+                        left = mid + 1;
+                    } else {
+                        right = mid - 1;
+                    }
+                }
+            }
+
+            return -1;
+        }
+
+
+
+        /**
+         * 思路：
+         * 1. 先找到数组中的分界点
+         * 2. 再对两边的数组，依次进行二分查找
+         *
+         *
+         * @param nums
+         * @param target
+         * @return
+         */
+        public int search0(int[] nums, int target) {
             int k = searchK(nums, 0, nums.length - 1);
 
             if (target >= nums[0]) {
@@ -16,6 +70,7 @@ public class Leetcode_33 {
                 // 靠右选择中间元素
                 int mid = (left + right + 1) / 2;
                 if (nums[mid] < nums[left]) {
+                    // 因为 mid 是靠右选择，所以当命中左边区间时，mid - 1 可以有效支持。
                     right = mid - 1;
                 } else {
                     // nums[mid] <= nums[left]

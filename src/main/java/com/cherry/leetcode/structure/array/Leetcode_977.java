@@ -16,7 +16,7 @@ public class Leetcode_977 {
     }
 
     /**
-     * 双指针
+     * 逆序归并排序
      * @param nums
      * @return
      */
@@ -46,40 +46,26 @@ public class Leetcode_977 {
     }
 
     /**
-     * 归并排序
+     * 1. 先找到分界点
+     * 2. 正序归并排序
      * @param nums
      * @return
      */
     public int[] sortedSquares(int[] nums) {
         int length = nums.length;
         int right = 0;
-        for (int i = 0; i < length; i++) {
-            if (nums[i] < 0) {
+        for (int num : nums) {
+            if (num < 0) {
                 right++;
             }
         }
 
         int[] newNums = new int[length];
-        // 全正
-        if (right == 0) {
-            for (int i = 0; i < length; i++) {
-                newNums[i] = nums[i] * nums[i];
-            }
-            return newNums;
-        }
 
-        // 全负
-        if (right == length) {
-
-            for (int i = length - 1; i >= 0; i--) {
-                newNums[length - 1 - i] = nums[i] * nums[i];
-            }
-            return newNums;
-
-        }
         int left = right - 1;
         int newIndex = 0;
         while (left >= 0 || right < length) {
+
             if (left >= 0 && right < length) {
                 int l = nums[left] * nums[left];
                 int r = nums[right] * nums[right];
@@ -87,16 +73,12 @@ public class Leetcode_977 {
                     newNums[newIndex] = l;
                     newIndex++;
                     left--;
-                    continue;
                 } else {
                     newNums[newIndex] = r;
                     newIndex++;
                     right++;
-                    continue;
                 }
-            }
-
-            if (left < 0) {
+            } else if (left < 0) {
                 newNums[newIndex] = nums[right] * nums[right];
                 newIndex++;
                 right++;

@@ -14,38 +14,26 @@ public class Leetcode_209 {
     }
 
     public int minSubArrayLen(int target, int[] nums) {
-        int left = 0;
-        int right = 0;
-        int min = Integer.MAX_VALUE;
+        int minLength = Integer.MAX_VALUE;
         int sum = 0;
-        int cur = 0;
-        int length = nums.length;
-
-        while (left <= right && right < length) {
-            sum = sum + nums[right];
-            cur++;
-            if (sum >= target) {
-                // sum >= target record min
-                min = Math.min(min, cur);
-
-                if (min == 1) {
-                    return 1;
-                }
-
-                // 缩小窗口
-                while (sum - nums[left] >= target && left <= right) {
-                    sum = sum - nums[left];
-                    cur--;
-                    min = Math.min(min, cur);
-                    if (min == 1) {
-                        return 1;
-                    }
-                    left++;
-                }
+        int left = -1;
+        int right = 0;
+        // for 循环中i代表right指针
+        // 区间 (]
+        for (; right < nums.length; right++) {
+            sum += nums[right];
+            // right ->
+            if (sum < target) {
+                continue;
             }
-            right++;
+            // left ->
+            while (sum >= target && left < right) {
+                // 更新最小长度
+                minLength = Math.min(minLength, right - left);
+                sum -= nums[++left];
+            }
         }
+        return minLength == Integer.MAX_VALUE ? 0 : minLength;
 
-        return min;
     }
 }

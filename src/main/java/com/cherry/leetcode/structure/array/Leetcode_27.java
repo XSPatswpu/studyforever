@@ -2,6 +2,23 @@ package com.cherry.leetcode.structure.array;
 
 public class Leetcode_27 {
 
+    /**
+     * 快慢双指针
+     * @param nums
+     * @param val
+     * @return
+     */
+    public int removeElement0(int[] nums, int val) {
+        int left = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != val) {
+                nums[++left] = nums[i];
+            }
+        }
+        return left + 1;
+
+    }
+
     public int removeElement(int[] nums, int val) {
         int len = nums.length;
         for (int i = 0; i < len; i++) {
