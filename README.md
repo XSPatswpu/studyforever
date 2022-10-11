@@ -21,7 +21,7 @@
 赋值引用变量时，避免变量丢失，应先暂存再赋值。
 
 | Leetcode题号 | 题目 | 难度 | 掌握程度 |
-| :----: | :----: | :----: |
+| :----: | :----: | :----: | :----: |
 | [21](https://leetcode-cn.com/problems/merge-two-sorted-lists/) | 合并两个有序链表 | 简单 | 较好 |
 | [160](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) | 相交链表 | 简单 | 一般 |
 | [25](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/) | K 个一组翻转链表 | 困难 | <font color=red>差</font> |
