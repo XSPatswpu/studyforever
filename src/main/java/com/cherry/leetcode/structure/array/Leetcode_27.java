@@ -1,5 +1,7 @@
 package com.cherry.leetcode.structure.array;
 
+import com.cherry.leetcode.utils.PrintUtil;
+
 public class Leetcode_27 {
 
     /**
@@ -55,5 +57,31 @@ public class Leetcode_27 {
         }
         return slow + 1;
 
+    }
+
+    public int removeElement3(int[] nums, int val) {
+        int start = 0,end = nums.length - 1;
+        for (; start <= end; start++) {
+            if (nums[start] == val) {
+                // swap
+                int temp = nums[start];
+                nums[start] = nums[end];
+                nums[end] = temp;
+                end--;
+                start--;
+            }
+        }
+        return start;
+    }
+
+    public static void main(String[] args) {
+
+        Leetcode_27 lc = new Leetcode_27();
+        int[] arr = {1, 1};
+        int value = 1;
+
+        int i = lc.removeElement3(arr, value);
+        System.out.println(i);
+        PrintUtil.print(arr);
     }
 }

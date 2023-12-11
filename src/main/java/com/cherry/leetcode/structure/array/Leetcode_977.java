@@ -4,16 +4,7 @@ import com.cherry.leetcode.utils.PrintUtil;
 
 public class Leetcode_977 {
 
-    public static void main(String[] args) {
-        int[] array = {-4, -1, 0};
 
-        Leetcode_977 lc977 = new Leetcode_977();
-        int[] ints = lc977.sortedSquares1(array);
-
-        PrintUtil.print(ints);
-
-
-    }
 
     /**
      * 逆序归并排序
@@ -91,4 +82,32 @@ public class Leetcode_977 {
         return newNums;
     }
 
+
+    public int[] sortedSquares2(int[] nums) {
+        int[] newNums = new int[nums.length];
+        int ahead = 0, behind = nums.length - 1, index = nums.length - 1;
+        while (ahead <= behind) {
+            if (nums[ahead] * nums[ahead] >=  nums[behind] * nums[behind]) {
+                newNums[index] = nums[ahead] * nums[ahead];
+                ahead++;
+            } else {
+                newNums[index] = nums[behind] * nums[behind];
+                behind--;
+            }
+            index--;
+        }
+
+        return newNums;
+    }
+
+    public static void main(String[] args) {
+        int[] array = {-4, -1, 0};
+
+        Leetcode_977 lc977 = new Leetcode_977();
+        int[] ints = lc977.sortedSquares2(array);
+
+        PrintUtil.print(ints);
+
+
+    }
 }
