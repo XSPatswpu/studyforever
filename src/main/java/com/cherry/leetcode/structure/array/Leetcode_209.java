@@ -1,18 +1,6 @@
 package com.cherry.leetcode.structure.array;
 
 public class Leetcode_209 {
-
-    public static void main(String[] args) {
-        int target = 7;
-        int[] array = {2, 3, 1, 2, 4, 3};
-
-        Leetcode_209 lc = new Leetcode_209();
-        int i = lc.minSubArrayLen(target, array);
-        System.out.println(i);
-
-
-    }
-
     public int minSubArrayLen(int target, int[] nums) {
         int minLength = Integer.MAX_VALUE;
         int sum = 0;
@@ -36,4 +24,29 @@ public class Leetcode_209 {
         return minLength == Integer.MAX_VALUE ? 0 : minLength;
 
     }
+    public int minSubArrayLen2(int target, int[] nums) {
+        int len = 1000000, sub = 0;
+        int left = 0, right = 0;
+        for (; right < nums.length; right++) {
+            sub += nums[right];
+            // while
+            while (sub >= target && left <= right) {
+                len = Math.min(len, right - left + 1);
+                sub -= nums[left];
+                left++;
+            }
+        }
+        return len == 1000000 ? 0 : len;
+    }
+
+    public static void main(String[] args) {
+        int target = 11;
+        int[] array = {1,1,1,1,1,1,1,1};
+
+        Leetcode_209 lc = new Leetcode_209();
+        int i = lc.minSubArrayLen2(target, array);
+        System.out.println(i);
+
+    }
+
 }
