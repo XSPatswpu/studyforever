@@ -29,4 +29,18 @@ public class Leetcode_3 {
         }
         return subLength;
     }
+
+    public int lengthOfLongestSubstring01(String s) {
+        char[] arr = s.toCharArray();
+        int left = 0, right = 0, max = -1;
+        Set<Character> set = new HashSet<>();
+        for (; right < arr.length; right++) {
+            while (left <= right && !set.add(arr[right])) {
+                set.remove(arr[left]);
+                left++;
+            }
+            max = Math.max(max, right - left + 1);
+        }
+        return max == -1 ? 0 : max;
+    }
 }
