@@ -1,6 +1,7 @@
 package com.cherry.leetcode.structure.list;
 
 import com.cherry.leetcode.utils.ListNode;
+import com.cherry.leetcode.utils.PrintUtil;
 
 public class Leetcode_25 {
     public static void main(String[] args) {
@@ -15,8 +16,10 @@ public class Leetcode_25 {
         node4.next = node5;
 
         Leetcode_25 leetcode_25 = new Leetcode_25();
-//        ListNode listNode = leetcode_25.reverseKGroup(node1, 2);
-//        System.out.println(listNode.val);
+        PrintUtil.printList(node1);
+        ListNode listNode = leetcode_25.reverseKGroup02(node1, 2);
+        PrintUtil.printList(listNode);
+
     }
 
 
@@ -26,63 +29,108 @@ public class Leetcode_25 {
      * 3. 局部的链表反转完之后，要和外面的链表连起来
      * 4. 再循环中处理好之后，记得指针复位
      */
-    class Solution {
-        public ListNode reverseKGroup(ListNode head, int k) {
-            ListNode hair = new ListNode(-1);
-            hair.next = head;
-            ListNode tail = head;
-            ListNode pre = hair;
+    public ListNode reverseKGroup(ListNode head, int k) {
+        ListNode hair = new ListNode(-1);
+        hair.next = head;
+        ListNode tail = head;
+        ListNode pre = hair;
 
-            while (head != null) {
+        while (head != null) {
 
-                for (int i = 0; i < k - 1; i++) {
-                    tail = tail.next;
-                    if (tail == null) {
-                        // 结束
-                        return hair.next;
-                    }
-
+            for (int i = 0; i < k - 1; i++) {
+                tail = tail.next;
+                if (tail == null) {
+                    // 结束
+                    return hair.next;
                 }
-                ListNode nex = tail.next;
 
-                // 反转操作
-                ListNode[] reverse = reverse(head, tail);
-                head = reverse[0];
-                tail = reverse[1];
-
-                // 把反转后的链表，与外面的链表节点连起来
-                pre.next = head;
-                tail.next = nex;
-
-                // 指针复位
-                pre = tail;
-                head = tail.next;
-                tail = head;
             }
+            ListNode nex = tail.next;
 
-            return hair.next;
+            // 反转操作
+            ListNode[] reverse = reverse(head, tail);
+            head = reverse[0];
+            tail = reverse[1];
 
+            // 把反转后的链表，与外面的链表节点连起来
+            pre.next = head;
+            tail.next = nex;
+
+            // 指针复位
+            pre = tail;
+            head = tail.next;
+            tail = head;
         }
 
-        public ListNode[] reverse(ListNode head, ListNode tail) {
-            if (head == tail) {
-                return new ListNode[]{head, tail};
-            }
-
-            ListNode prev = null;
-            ListNode cur = head;
-
-            while (prev != tail) {
-                ListNode temp = head.next;
-                head.next = prev;
-                prev = head;
-                head = temp;
-            }
-            return new ListNode[]{prev, cur};
-
-        }
+        return hair.next;
 
     }
 
+    public ListNode[] reverse(ListNode head, ListNode tail) {
+        if (head == tail) {
+            return new ListNode[]{head, tail};
+        }
+
+        ListNode prev = null;
+        ListNode cur = head;
+
+        while (prev != tail) {
+            ListNode temp = head.next;
+            head.next = prev;
+            prev = head;
+            head = temp;
+        }
+        return new ListNode[]{prev, cur};
+
+    }
+
+    public ListNode reverseKGroup02(ListNode head, int k) {
+        if (k < 2) {
+            return head;
+        }
+
+        ListNode tempHead = head;
+        int length = 0;
+        while (tempHead != null) {
+            length++;
+            tempHead = tempHead.next;
+        }
+        if (k > length) {
+            return head;
+        }
+        int i = 0;
+        ListNode reHead = null;
+        ListNode[] prevArr = {null, null, head};
+        do {
+            if (i + k > length) {
+                prevArr[1].next = prevArr[2];
+                break;
+            }
+            ListNode[] arr = doReverse02(prevArr[2], k);
+            // 拼接
+            if (prevArr[0] != null) {
+                prevArr[1].next = arr[0];
+            } else {
+                reHead = arr[0];
+            }
+            i += k;
+            prevArr = arr;
+        } while (prevArr[2] != null);
+        return reHead;
+    }
+
+    public ListNode[] doReverse02(ListNode head, int k) {
+        ListNode prev = null, cur = head;
+        int count = 0;
+        while (count < k) {
+            ListNode tempNode = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = tempNode;
+            count++;
+        }
+        // {头，尾，下一个}
+        return new ListNode[]{prev, head, cur};
+    }
 
 }

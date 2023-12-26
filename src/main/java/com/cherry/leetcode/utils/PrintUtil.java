@@ -55,5 +55,6 @@ public class PrintUtil {
             }
             cur = cur.next;
         }
+        System.out.println();
     }
 }
