@@ -133,4 +133,46 @@ public class Leetcode_25 {
         return new ListNode[]{prev, head, cur};
     }
 
+    public ListNode reverseKGroup03(ListNode head, int k) {
+        if (k < 2 || head == null) {
+            return head;
+        }
+        ListNode hair = new ListNode(-1);
+        ListNode prevTail = hair;
+        ListNode[] prevArr = {hair, head};
+        while (prevArr[1] != null) {
+            // 判断是否需要反转
+            ListNode tail = prevArr[1];
+            for (int i = 0; i < k - 1 && tail != null; i++) {
+                tail = tail.next;
+            }
+            // 不反转
+            if (tail == null) {
+                break;
+            }
+            // 反转
+            ListNode[] arr = doReverse(prevArr[1], k);
+
+            // 拼接
+            prevTail.next = arr[0];
+            prevArr[1].next = arr[1];
+            prevTail = prevArr[1];
+            prevArr = arr;
+        }
+        return hair.next;
+    }
+
+    public ListNode[] doReverse(ListNode head, int k) {
+        ListNode prev = null, cur = head;
+        int count = 0;
+        while (count < k) {
+            ListNode tempNode = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = tempNode;
+            count++;
+        }
+        // {当前头节点，下一个节点}
+        return new ListNode[]{prev, cur};
+    }
 }
