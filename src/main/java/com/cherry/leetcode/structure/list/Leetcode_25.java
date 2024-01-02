@@ -12,12 +12,12 @@ public class Leetcode_25 {
         node2.next = node3;
         ListNode node4 = new ListNode(4);
         node3.next = node4;
-        ListNode node5 = new ListNode(5);
-        node4.next = node5;
+//        ListNode node5 = new ListNode(5);
+//        node4.next = node5;
 
         Leetcode_25 leetcode_25 = new Leetcode_25();
         PrintUtil.printList(node1);
-        ListNode listNode = leetcode_25.reverseKGroup02(node1, 2);
+        ListNode listNode = leetcode_25.reverseKGroup04(node1, 3);
         PrintUtil.printList(listNode);
 
     }
@@ -154,8 +154,11 @@ public class Leetcode_25 {
             ListNode[] arr = doReverse(prevArr[1], k);
 
             // 拼接
+            // prev tail -> cur head
             prevTail.next = arr[0];
+            // cur tail -> next head
             prevArr[1].next = arr[1];
+
             prevTail = prevArr[1];
             prevArr = arr;
         }
@@ -175,4 +178,43 @@ public class Leetcode_25 {
         // {当前头节点，下一个节点}
         return new ListNode[]{prev, cur};
     }
+
+    public ListNode reverseKGroup04(ListNode head, int k) {
+        if (k < 2 || head == null) {
+            return head;
+        }
+        ListNode hair = new ListNode(-1);
+        hair.next = head;
+        ListNode prev = hair;
+        while (head != null) {
+            // get tail
+            ListNode tail = prev;
+            for (int i = 0; i < k && tail != null; i++) {
+                tail = tail.next;
+            }
+            if (tail == null) {
+                break;
+            }
+            ListNode[] arr = doReverse04(head, tail);
+            prev.next = arr[0];
+            arr[1].next = arr[2];
+
+            prev = arr[1];
+            head = prev.next;
+        }
+        return hair.next;
+    }
+
+    private ListNode[] doReverse04(ListNode head, ListNode tail) {
+        ListNode prev = null, cur = head;
+        while (prev != tail) {
+            ListNode temp = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = temp;
+        }
+        // {head, tail, next}
+        return new ListNode[]{prev, head, cur};
+    }
+
 }
