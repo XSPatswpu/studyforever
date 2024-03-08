@@ -19,4 +19,28 @@ public class Leetcode_121 {
             return max;
         }
     }
+    class Solution2 {
+        // dp(i) = Math.min(dp(i + 1), price(i + 1))
+        public int maxProfit(int[] prices) {
+            int ans = 0;
+            if (prices.length == 1) {
+                return ans;
+            }
+            int dp = 0;
+            for (int i = prices.length - 2; i >= 0; i--) {
+                dp = Math.max(dp, prices[i + 1]);
+                ans = Math.max(ans, dp - prices[i]);
+            }
+            return ans;
+
+        }
+    }
+
+
+
+
+
+
+
+
 }
