@@ -1,6 +1,7 @@
 package com.cherry.leetcode.algorithm.sreachback;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -38,4 +39,45 @@ public class Leetcode_46 {
             }
         }
     }
+
+
+
+    public static class Solution2 {
+        public List<List<Integer>> permute(int[] nums) {
+
+            List<List<Integer>> res = new ArrayList<>();
+            List<Integer> path = new LinkedList<>();
+            boolean[] prev = new boolean[nums.length];
+            dp(nums, res, path, prev);
+            return res;
+        }
+
+        public void dp(int[] nums, List<List<Integer>> res, List<Integer> path, boolean[] prev) {
+            if (path.size() == nums.length) {
+                res.add(new ArrayList<>(path));
+                return;
+            }
+            for (int i = 0; i < nums.length; i++) {
+                if (prev[i]) {
+                    continue;
+                }
+                path.add(nums[i]);
+                prev[i] = true;
+                dp(nums, res, path, prev);
+                path.remove(path.size() - 1);
+                prev[i] = false;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1,2,3};
+        Solution2 s2 = new Solution2();
+        List<List<Integer>> permute = s2.permute(nums);
+        System.out.println(permute);
+    }
+
+
+
+
 }
