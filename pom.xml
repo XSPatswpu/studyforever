@@ -14,6 +14,7 @@
     <modules>
         <module>trace</module>
         <module>coding</module>
+        <module>practice</module>
     </modules>
 
     <properties>
@@ -24,6 +25,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-configuration-processor</artifactId>
+                <version>2.1.15.RELEASE</version>
+                <optional>true</optional>
+            </dependency>
             <dependency>
                 <groupId>io.opentelemetry</groupId>
                 <artifactId>opentelemetry-bom</artifactId>
