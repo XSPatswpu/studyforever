@@ -1,6 +1,6 @@
 package com.cherry.dailycoding.dp;
 
-public class Dp2 {
+public class DP2 {
     // lc 70
 
     /**

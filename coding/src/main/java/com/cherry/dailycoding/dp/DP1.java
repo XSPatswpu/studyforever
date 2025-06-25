@@ -1,6 +1,6 @@
 package com.cherry.dailycoding.dp;
 
-public class Dp1 {
+public class DP1 {
     // lc 509
     public int fib(int n) {
         if (n <= 1) {
