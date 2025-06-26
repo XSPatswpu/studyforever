@@ -49,21 +49,21 @@ public class DP3 {
 
      */
 
-
     /**
-     * 1. dp[i] 表示爬完 i + 1 个台阶的最低花费
-     * 2. dp[i] = min(dp[i - 1], dp[i - 2])
+     * lc 746
+     * 1. dp[i] 表示爬到 i 号 台阶的最低花费
+     * 2. dp[i] = Math.min((dp[i - 1] + cost[i - 1]), (dp[i - 2] + cost[i - 2]));
      * 3. dp[0] = cost[0] dp[1] = cost[1]
      * 4. 以 cost 数组为基础，从左往右迭代
      * 5. dp[2] dp[3] dp[4] ... dp[i]
      */
     public int minCostClimbingStairs(int[] cost) {
-
-        int[] dp = new int[cost.length];
-        dp[0] = cost[0];
-        dp[1] = Math.min((dp[0] + cost[1]), (cost[0]));
-        for (int i = 2; i < cost.length; i++) {
-            dp[i] = Math.min((dp[i - 1] + cost[i]), (dp[i - 2] + cost[i - 1]));
+        int[] dp = new int[cost.length + 1];
+        dp[0] = 0;
+        dp[1] = 0;
+        dp[2] = Math.min(dp[1] + cost[1], dp[0] + cost[0]);
+        for (int i = 3; i < dp.length; i++) {
+            dp[i] = Math.min((dp[i - 1] + cost[i - 1]), (dp[i - 2] + cost[i - 2]));
         }
         return dp[dp.length - 1];
     }
