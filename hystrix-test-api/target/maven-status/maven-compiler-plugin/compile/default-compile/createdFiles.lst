@@ -1,0 +1,3 @@
+com/cherry/feign/DownServerFeign.class
+com/cherry/feign/DownServerFeignFallbackFactory.class
+com/cherry/feign/DownServerFeignFallbackFactory$1.class

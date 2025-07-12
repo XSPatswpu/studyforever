@@ -1,0 +1,6 @@
+server:
+  port: 8978
+
+feign:
+  hystrix:
+    enabled: true
